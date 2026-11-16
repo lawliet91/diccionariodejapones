@@ -1,0 +1,15 @@
+{
+  "name": "Diccionario de Japonés",
+  "short_name": "Diccionario",
+  "description": "El mejor diccionario japonés-español, muy pronto.",
+  "lang": "es",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "/assets/iconos/icono-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/iconos/icono-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/iconos/icono-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

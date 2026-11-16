@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../docs/assets/estilos.css">
+  <style>
+    /* Imagen para redes (1200×630) con las mismas piezas que la portada. */
+    html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; background: #fff; }
+    .og { position: relative; width: 1200px; height: 630px; overflow: hidden; }
+    .og *, .og *::before, .og *::after { animation: none !important; }
+    .og .sol { --d: 540px; top: -120px; right: -70px; }
+    .og .sol__anillo { --giro: 100%; }
+    .og .sol__texto { transform: translate(-50%, -50%) translate(-30px, 34px); }
+    .og .marca { position: absolute; left: 72px; top: 52px; }
+    .og .marca img { height: 40px; }
+    .og .texto { position: absolute; left: 72px; top: 178px; width: 640px; }
+    .og h1 {
+      margin: 22px 0 0;
+      color: var(--marino);
+      font-family: var(--titular);
+      font-weight: 700;
+      font-size: 66px;
+      line-height: 1.03;
+      letter-spacing: -.01em;
+    }
+    .og .url {
+      position: absolute;
+      left: 72px;
+      bottom: 54px;
+      color: var(--suave);
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: .04em;
+    }
+    .og .url b { color: var(--rojo); }
+    .og .coco { --c: 200px; right: 300px; bottom: 14px; }
+    .og .coco__img { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="og">
+    <div class="sol">
+      <span class="sol__patron"></span>
+      <span class="sol__anillo"></span>
+      <div class="sol__disco">
+        <p class="sol__texto">
+          <span class="sol__kanji" lang="ja"><ruby>辞<rt>じ</rt>書<rt>しょ</rt></ruby></span>
+          <span class="sol__raya"></span>
+          <span class="sol__es">Diccionario</span>
+          <span class="sol__romaji">jisho</span>
+        </p>
+      </div>
+    </div>
+    <span class="marca"><img src="../docs/assets/img/logo-jaf-color.webp" alt=""><span class="marca__r">®</span></span>
+    <div class="texto">
+      <p class="estado"><span class="estado__punto"></span>Muy pronto</p>
+      <h1>El mejor diccionario <span class="sin-corte">japonés-español</span> <span class="sin-corte">del mundo</span></h1>
+    </div>
+    <p class="url"><b>diccionariodejapones</b>.com</p>
+    <figure class="coco">
+      <span class="coco__disco"></span>
+      <img class="coco__img" src="../docs/assets/img/coco-notas-560.webp" alt="">
+    </figure>
+  </div>
+</body>
+</html>
