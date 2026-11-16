@@ -20,7 +20,6 @@ mkdirSync(salida, { recursive: true });
 // nombre de salida, original, anchos (px reales; en pantalla se ven a la mitad)
 const COCOS = [
   ["coco-notas", `${COCO}/Poses/Coco-chan Tomando Notas.png`, [280, 420, 560]],
-  ["coco-ensenando", `${COCO}/Poses/Coco-chan Enseñando 2.png`, [300, 520]],
   ["coco-pregunta", `${COCO}/Poses/Coco-chan Pregunta nueva.png`, [300, 520]],
 ];
 
@@ -43,8 +42,6 @@ for (const [nombre, origen, anchos] of COCOS) {
 // Logos de Japonés a Fondo (los mismos del kit de recursos).
 await sharp(`${KIT}/logo-footer.webp`).resize({ width: 360 }).webp({ quality: 90, effort: 6 })
   .toFile(path.join(salida, "logo-jaf-color.webp"));
-await sharp(`${KIT}/logo-redondo.png`).resize({ width: 96 }).webp({ quality: 90, effort: 6 })
-  .toFile(path.join(salida, "logo-jaf-redondo.webp"));
 // PNG del logo para el JSON-LD (Google no lee WebP en «logo» de forma fiable).
 await sharp(`${KIT}/logo-redondo.png`).resize({ width: 512 }).png({ compressionLevel: 9 })
   .toFile(path.join(salida, "logo-jaf-512.png"));

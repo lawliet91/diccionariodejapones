@@ -30,8 +30,22 @@
 
   <link rel="preload" href="/assets/fonts/josefin-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/atkinson-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/estilos.css?v=1">
-  <script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-anim");</script>
+  <link rel="stylesheet" href="/assets/estilos.css?v=2">
+
+  <!-- Google Analytics (solo en el dominio publicado) -->
+  <script>
+    (function (h) {
+      if (h !== "diccionariodejapones.com" && h !== "www.diccionariodejapones.com") return;
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=G-6RZ1CL9BTP";
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", "G-6RZ1CL9BTP");
+    })(location.hostname);
+  </script>
 
   <script type="application/ld+json">
   {
@@ -85,180 +99,43 @@
     <svg class="petalo" style="--x:68%;--t:19px;--d:19s;--r:6s;--dx:50px"><use href="#petalo"/></svg>
   </div>
 
-  <header class="portada">
+  <main class="portada">
     <div class="portada__lienzo">
-    <div class="barra">
-      <a class="marca" href="https://japonesafondo.com/" aria-label="Japonés a Fondo">
-        <img src="/assets/img/logo-jaf-color.webp" alt="" width="180" height="39">
-        <span class="marca__r" aria-hidden="true">®</span>
-      </a>
-    </div>
+      <header class="barra">
+        <a class="marca" href="https://japonesafondo.com/" aria-label="Japonés a Fondo">
+          <img src="/assets/img/logo-jaf-color.webp" alt="" width="180" height="39">
+          <span class="marca__r" aria-hidden="true">®</span>
+        </a>
+      </header>
 
-    <div class="sol">
-      <span class="sol__patron" aria-hidden="true"></span>
-      <span class="sol__anillo" aria-hidden="true"></span>
-      <div class="sol__disco">
-        <p class="sol__texto">
-          <span class="sol__kanji" lang="ja"><ruby>辞<rt>じ</rt>書<rt>しょ</rt></ruby></span>
-          <span class="sol__raya" aria-hidden="true"></span>
-          <span class="sol__es">Diccionario</span>
-          <span class="sol__romaji">jisho</span>
-        </p>
-      </div>
-    </div>
-
-    <div class="portada__texto">
-      <p class="estado"><span class="estado__punto" aria-hidden="true"></span>Web en construcción</p>
-      <h1>El mejor diccionario <span class="sin-corte">japonés-español</span> <span class="sin-corte">del mundo</span></h1>
-      <p class="portada__sub">Significados en español, lecturas, acento tonal y kanji con su orden de trazos. Abre muy pronto.</p>
-      <div class="acciones">
-        <a class="boton boton--rojo" href="#adelanto">Ver un adelanto<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10m0 0 4-4m-4 4L4 9"/></svg></a>
-        <a class="boton boton--linea" href="https://japonesafondo.com/">Aprende japonés mientras tanto</a>
-      </div>
-    </div>
-
-    <figure class="coco">
-      <span class="coco__disco" aria-hidden="true"></span>
-      <picture>
-        <source type="image/avif" srcset="/assets/img/coco-notas-280.avif 280w, /assets/img/coco-notas-420.avif 420w, /assets/img/coco-notas-560.avif 560w" sizes="(max-width: 700px) 170px, 280px">
-        <img class="coco__img" src="/assets/img/coco-notas-420.webp" srcset="/assets/img/coco-notas-280.webp 280w, /assets/img/coco-notas-420.webp 420w, /assets/img/coco-notas-560.webp 560w" sizes="(max-width: 700px) 170px, 280px" width="560" height="740" alt="Coco-chan, el perrito de Japonés a Fondo, apuntando palabras en su libreta">
-      </picture>
-    </figure>
-    </div>
-  </header>
-
-  <main id="adelanto" class="adelanto">
-    <div class="adelanto__dentro">
-      <div class="adelanto__texto">
-        <p class="kicker">Un adelanto</p>
-        <h2>Cada palabra, <span class="sin-corte">a fondo</span></h2>
-        <p class="adelanto__lead">Así se verá una palabra: con su lectura, su acento, su significado en español, un ejemplo y sus kanji, trazo a trazo.</p>
-        <picture class="adelanto__coco">
-          <source type="image/avif" srcset="/assets/img/coco-ensenando-300.avif 300w, /assets/img/coco-ensenando-520.avif 520w" sizes="260px">
-          <img src="/assets/img/coco-ensenando-520.webp" srcset="/assets/img/coco-ensenando-300.webp 300w, /assets/img/coco-ensenando-520.webp 520w" sizes="260px" width="520" height="494" alt="Coco-chan señalando la ficha de ejemplo con un puntero" loading="lazy" decoding="async">
-        </picture>
-      </div>
-
-      <article class="ficha" aria-labelledby="ficha-palabra">
-        <div class="ficha__cabecera">
-          <p class="ficha__palabra" id="ficha-palabra" lang="ja"><ruby>辞<rt>じ</rt>書<rt>しょ</rt></ruby></p>
-          <div class="ficha__datos">
-            <p class="ficha__romaji">jisho</p>
-            <ul class="ficha__etiquetas">
-              <li class="pastilla pastilla--marino">Sustantivo</li>
-              <li class="pastilla pastilla--cielo">Palabra común</li>
-            </ul>
-          </div>
-          <figure class="ficha__acento">
-            <figcaption>Acento</figcaption>
-            <svg viewBox="0 0 96 54" role="img" aria-label="Acento: じ alta y しょ baja; la partícula siguiente sigue baja">
-              <polyline class="acento__linea" points="14,8 48,28"/>
-              <polyline class="acento__linea acento__linea--part" points="48,28 82,28"/>
-              <circle class="acento__punto" cx="14" cy="8" r="4.5"/>
-              <circle class="acento__punto" cx="48" cy="28" r="4.5"/>
-              <circle class="acento__punto acento__punto--part" cx="82" cy="28" r="4.5"/>
-              <text x="14" y="50">じ</text>
-              <text x="48" y="50">しょ</text>
-              <text class="acento__part" x="82" y="50">は</text>
-            </svg>
-          </figure>
+      <div class="sol">
+        <span class="sol__patron" aria-hidden="true"></span>
+        <span class="sol__anillo" aria-hidden="true"></span>
+        <div class="sol__disco">
+          <p class="sol__texto">
+            <span class="sol__kanji" lang="ja"><ruby>辞<rt>じ</rt>書<rt>しょ</rt></ruby></span>
+            <span class="sol__raya" aria-hidden="true"></span>
+            <span class="sol__es">Diccionario</span>
+            <span class="sol__romaji">jisho</span>
+          </p>
         </div>
+      </div>
 
-        <section class="ficha__bloque" aria-label="Significado">
-          <h3 class="ficha__titulo">Significado</h3>
-          <p class="ficha__significado">diccionario; léxico</p>
-        </section>
+      <div class="portada__texto">
+        <p class="estado"><span class="estado__punto" aria-hidden="true"></span>Web en construcción</p>
+        <h1>El mejor diccionario <span class="sin-corte">japonés-español</span> <span class="sin-corte">del mundo</span></h1>
+        <p class="portada__sub">Significados en español, lecturas, acento tonal y kanji con su orden de trazos. Abre muy pronto.</p>
+        <a class="boton" href="https://japonesafondo.com/">Aprende japonés mientras tanto</a>
+      </div>
 
-        <section class="ficha__bloque" aria-label="Ejemplo">
-          <h3 class="ficha__titulo">Ejemplo</h3>
-          <p class="ficha__ejemplo" lang="ja">この<ruby>辞書<rt>じしょ</rt></ruby>は、ただいま<ruby>準備中<rt>じゅんびちゅう</rt></ruby>です。</p>
-          <p class="ficha__traduccion">Este diccionario está ahora mismo en preparación.</p>
-          <p class="ficha__nota"><span lang="ja">準備中</span> es el cartel que cuelgan las tiendas en Japón mientras se preparan para abrir.</p>
-        </section>
-
-        <section class="ficha__bloque" aria-label="Kanji">
-          <h3 class="ficha__titulo">Kanji</h3>
-          <ul class="ficha__kanji">
-            <li class="kanji">
-              <button type="button" class="kanji__dibujo" aria-label="Ver otra vez el orden de trazos de 辞">
-                <svg viewBox="0 0 109 109" aria-hidden="true" focusable="false">
-                  <g class="trazos">
-                    <path style="--i:0" pathLength="1" d="M38.75,16.12c0.12,1-0.41,1.82-1.39,2.67c-2.87,2.49-10.15,6.61-22.86,10.08"/>
-                    <path style="--i:1" pathLength="1" d="M12.03,45.21c1.01,0.31,3.56,0.2,4.56,0.06c9.57-1.27,21.08-3.02,27.83-3.43c1.69-0.1,2.71-0.1,3.55,0.06"/>
-                    <path style="--i:2" pathLength="1" d="M30.46,26.37c0.83,0.83,1.19,2.13,1.19,3.58c0,8.05,0.11,25.05,0.11,31.69"/>
-                    <path style="--i:3" pathLength="1" d="M17.85,63.83c0.85,0.85,1.43,1.79,1.6,2.81c1.14,6.99,1.81,11.94,2.29,15.61c0.23,1.76,0.42,3.24,0.59,4.5"/>
-                    <path style="--i:4" pathLength="1" d="M19.77,64.78c7.83-1.06,16.02-2.4,21.25-3.4c2.61-0.5,4.36,1.63,3.85,4.25c-0.81,4.17-2.02,8.85-3.49,14.4"/>
-                    <path style="--i:5" pathLength="1" d="M23.14,83.25c4.77-0.39,10.61-1.3,16.97-2c1.24-0.14,2.49-0.27,3.77-0.38"/>
-                    <path style="--i:6" pathLength="1" d="M68.34,12.75c0.73,0.75,1.59,2,1.59,3.75s0,4,0,8.75"/>
-                    <path style="--i:7" pathLength="1" d="M52.88,27.7c1.92,0.59,4.03,0.32,6,0.14c6.52-0.6,18.02-2.26,26.12-2.72c2.08-0.12,4.11-0.16,6.17,0.22"/>
-                    <path style="--i:8" pathLength="1" d="M57.66,34.5c3.64,4.01,5.29,8.11,5.62,10.75"/>
-                    <path style="--i:9" pathLength="1" d="M83.49,29.62c0.28,0.7,0.28,1.52,0.06,2.36c-0.74,2.84-4.76,12.06-5.92,14.27"/>
-                    <path style="--i:10" pathLength="1" d="M48.25,51.3c2.62,0.57,4.37,0.29,6.51,0.07c10.63-1.1,24.29-2.6,35.11-3.27c2.25-0.14,4.41-0.26,6.62,0.23"/>
-                    <path style="--i:11" pathLength="1" d="M52.89,67.85c1.21,0.32,3.45,0.45,4.66,0.32c9.71-1.05,22.21-2.55,31.44-3.17c2.02-0.13,3.24,0.15,4.25,0.32"/>
-                    <path style="--i:12" pathLength="1" d="M70.02,51.63c1.05,1.05,1.59,2.49,1.59,4.21c0,4.85-0.1,24.66-0.14,35.28c-0.01,2.58-0.02,4.61-0.02,5.76"/>
-                  </g>
-                </svg>
-              </button>
-              <div class="kanji__info">
-                <p class="kanji__lecturas" lang="ja">ジ・や(める)</p>
-                <p class="kanji__significado">palabra; renuncia</p>
-                <p class="kanji__trazos">13 trazos</p>
-              </div>
-            </li>
-            <li class="kanji">
-              <button type="button" class="kanji__dibujo" aria-label="Ver otra vez el orden de trazos de 書">
-                <svg viewBox="0 0 109 109" aria-hidden="true" focusable="false">
-                  <g class="trazos">
-                    <path style="--i:0" pathLength="1" d="M30.74,20.63c2.01,0.49,3.84,0.58,5.91,0.39c9.45-0.89,28.54-2.97,37.54-3.64c2.92-0.22,4.18,1.24,3.66,3.55c-0.4,1.76-2.56,9.62-3.88,16.56"/>
-                    <path style="--i:1" pathLength="1" d="M11.89,32.34c3.17,0.66,5.87,0.47,9.58,0.19c20.16-1.52,48.41-3.9,67.91-4.64c4.08-0.16,7.07,0.26,8.91,0.59"/>
-                    <path style="--i:2" pathLength="1" d="M29.86,41.38c1.64,0.49,3.39,0.52,4.84,0.44c9.67-0.57,27.55-2.07,37.43-2.85c1.93-0.15,3.14-0.08,4.59,0.07"/>
-                    <path style="--i:3" pathLength="1" d="M30.04,52.06c1.47,0.26,3.65,0.54,5.12,0.43c12.34-0.98,25.59-2.23,36.78-3.31c2.43-0.23,4.41-0.19,5.63-0.07"/>
-                    <path style="--i:4" pathLength="1" d="M17,63.44c2,0.58,5.67,0.57,7.66,0.41c20.78-1.7,42.92-3.93,61.09-4.48c3.33-0.1,5.33,0.15,6.99,0.42"/>
-                    <path style="--i:5" pathLength="1" d="M52.69,9.52c1.33,1.33,1.95,2.98,1.95,4.71c0,5.67,0.22,33.72,0.31,45.77"/>
-                    <path style="--i:6" pathLength="1" d="M31.25,71.75c0.43,0.46,1.24,1.44,1.43,2.7c1.11,7.42,2.22,14.33,3.18,20.74c0.18,1.2,0.34,2.38,0.49,3.57"/>
-                    <path style="--i:7" pathLength="1" d="M33.75,73.75c14.98-2.05,36.1-3.71,44.41-4.26c3.33-0.22,5.09,1.76,4.6,4.33c-0.99,5.22-2.01,11.55-3.81,19.41c-0.3,1.31-0.74,2.55-1.15,3.72"/>
-                    <path style="--i:8" pathLength="1" d="M35.5,83.75C46.79,83.03,65.75,81.5,80.25,81"/>
-                    <path style="--i:9" pathLength="1" d="M37.25,95.25c10.7-0.68,26.5-1.38,40.5-2"/>
-                  </g>
-                </svg>
-              </button>
-              <div class="kanji__info">
-                <p class="kanji__lecturas" lang="ja">ショ・か(く)</p>
-                <p class="kanji__significado">escribir; escrito</p>
-                <p class="kanji__trazos">10 trazos</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </article>
+      <figure class="coco">
+        <span class="coco__disco" aria-hidden="true"></span>
+        <picture>
+          <source type="image/avif" srcset="/assets/img/coco-notas-280.avif 280w, /assets/img/coco-notas-420.avif 420w, /assets/img/coco-notas-560.avif 560w" sizes="(max-width: 860px) 160px, 280px">
+          <img class="coco__img" src="/assets/img/coco-notas-420.webp" srcset="/assets/img/coco-notas-280.webp 280w, /assets/img/coco-notas-420.webp 420w, /assets/img/coco-notas-560.webp 560w" sizes="(max-width: 860px) 160px, 280px" width="560" height="740" alt="Coco-chan, el perrito de Japonés a Fondo, apuntando palabras en su libreta">
+        </picture>
+      </figure>
     </div>
   </main>
-
-  <footer class="pie">
-    <div class="pie__dentro">
-      <a class="pie__marca" href="https://japonesafondo.com/">
-        <img src="/assets/img/logo-jaf-redondo.webp" alt="" width="44" height="44" loading="lazy">
-        <span>Diccionario de Japonés es un proyecto de <b>Japonés a Fondo<sup>®</sup></b></span>
-      </a>
-      <nav class="pie__enlaces" aria-label="Enlaces">
-        <a href="https://japonesafondo.com/">japonesafondo.com</a>
-        <a href="https://www.youtube.com/@japonesafondo">YouTube</a>
-        <a href="https://instagram.com/japonesafondo">Instagram</a>
-        <button type="button" data-cookies>Cookies</button>
-      </nav>
-    </div>
-    <p class="pie__legal">© 2026 Japonés a Fondo. Datos de la ficha de muestra: JMdict (EDRDG, CC BY-SA 4.0), UniDic (NINJAL) y KanjiVG (Ulrich Apel, CC BY-SA 3.0).</p>
-  </footer>
-
-  <div class="cookies" role="dialog" aria-labelledby="cookies-titulo" aria-describedby="cookies-texto" hidden>
-    <p class="cookies__titulo" id="cookies-titulo">¿Puedo contar las visitas?</p>
-    <p class="cookies__texto" id="cookies-texto">Uso Google Analytics solo para saber cuánta gente pasa por aquí, sin publicidad. Puedes cambiar de opinión cuando quieras en «Cookies», al pie de la página.</p>
-    <div class="cookies__botones">
-      <button type="button" class="boton boton--suave" data-consentimiento="no">No, gracias</button>
-      <button type="button" class="boton boton--rojo" data-consentimiento="si">Sí, claro</button>
-    </div>
-  </div>
-
-  <script src="/assets/app.js?v=1" defer></script>
 </body>
 </html>

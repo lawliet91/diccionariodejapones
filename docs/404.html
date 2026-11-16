@@ -11,32 +11,45 @@
   <link rel="icon" href="/assets/iconos/icono-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="/assets/iconos/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/josefin-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/estilos.css?v=1">
+  <link rel="stylesheet" href="/assets/estilos.css?v=2">
+
+  <!-- Google Analytics (solo en el dominio publicado) -->
+  <script>
+    (function (h) {
+      if (h !== "diccionariodejapones.com" && h !== "www.diccionariodejapones.com") return;
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=G-6RZ1CL9BTP";
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", "G-6RZ1CL9BTP");
+    })(location.hostname);
+  </script>
 </head>
 <body>
-  <header class="portada portada--error">
+  <div class="portada">
     <div class="patron" aria-hidden="true"></div>
     <div class="portada__lienzo">
-    <div class="barra">
-      <a class="marca" href="https://japonesafondo.com/" aria-label="Japonés a Fondo">
-        <img src="/assets/img/logo-jaf-color.webp" alt="" width="180" height="39">
-        <span class="marca__r" aria-hidden="true">®</span>
-      </a>
-    </div>
+      <header class="barra">
+        <a class="marca" href="https://japonesafondo.com/" aria-label="Japonés a Fondo">
+          <img src="/assets/img/logo-jaf-color.webp" alt="" width="180" height="39">
+          <span class="marca__r" aria-hidden="true">®</span>
+        </a>
+      </header>
 
-    <main class="error">
-      <picture class="error__coco">
-        <source type="image/avif" srcset="/assets/img/coco-pregunta-300.avif 300w, /assets/img/coco-pregunta-520.avif 520w" sizes="220px">
-        <img src="/assets/img/coco-pregunta-520.webp" srcset="/assets/img/coco-pregunta-300.webp 300w, /assets/img/coco-pregunta-520.webp 520w" sizes="220px" width="520" height="489" alt="Coco-chan con cara de duda">
-      </picture>
-      <p class="estado">Error 404</p>
-      <h1>Esta página no está en el diccionario</h1>
-      <p class="portada__sub"><span lang="ja">あれ？</span> Puede que la dirección esté mal escrita o que esta parte de la web todavía no exista.</p>
-      <div class="acciones">
-        <a class="boton boton--rojo" href="/">Volver al inicio</a>
-      </div>
-    </main>
+      <main class="error">
+        <picture class="error__coco">
+          <source type="image/avif" srcset="/assets/img/coco-pregunta-300.avif 300w, /assets/img/coco-pregunta-520.avif 520w" sizes="220px">
+          <img src="/assets/img/coco-pregunta-520.webp" srcset="/assets/img/coco-pregunta-300.webp 300w, /assets/img/coco-pregunta-520.webp 520w" sizes="220px" width="520" height="489" alt="Coco-chan con cara de duda">
+        </picture>
+        <p class="estado">Error 404</p>
+        <h1>Esta página no está en el diccionario</h1>
+        <p class="portada__sub"><span lang="ja">あれ？</span> Puede que la dirección esté mal escrita o que esta parte de la web todavía no exista.</p>
+        <a class="boton" href="/">Volver al inicio</a>
+      </main>
     </div>
-  </header>
+  </div>
 </body>
 </html>
