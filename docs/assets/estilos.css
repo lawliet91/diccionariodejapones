@@ -299,8 +299,42 @@ rt { font-family: var(--japones); font-feature-settings: "palt"; text-align: cen
   background: var(--rojo);
   animation: latido 2.2s ease-out infinite;
 }
+/* «En construcción», bien visible: pastilla marino con 工事中 y el punto que late. */
+.en-obras {
+  display: inline-flex;
+  align-items: center;
+  gap: .8em;
+  max-width: 100%;
+  padding: .78em 1.45em .74em 1.15em;
+  border-radius: 999px;
+  background: var(--marino);
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(.9rem, .8rem + .5vw, 1.25rem);
+  line-height: 1;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 16px 32px -18px rgba(0, 29, 69, .7);
+}
+.en-obras__punto {
+  width: .62em;
+  height: .62em;
+  flex: none;
+  border-radius: 50%;
+  background: #ff3d3d;
+  animation: latido-claro 2s ease-out infinite;
+}
+.en-obras__jp {
+  padding-right: .8em;
+  border-right: 1px solid rgba(255, 255, 255, .32);
+  font-weight: 600;
+  font-size: 1.14em;
+  letter-spacing: .06em;
+  text-transform: none;
+}
 .portada h1 {
-  margin: .42em 0 .32em;
+  margin: .5em 0 .32em;
   color: var(--marino);
   font-family: var(--titular);
   font-weight: 700;
@@ -398,6 +432,11 @@ rt { font-family: var(--japones); font-feature-settings: "palt"; text-align: cen
   70% { box-shadow: 0 0 0 10px rgba(205, 0, 0, 0); }
   100% { box-shadow: 0 0 0 0 rgba(205, 0, 0, 0); }
 }
+@keyframes latido-claro {
+  0% { box-shadow: 0 0 0 0 rgba(255, 90, 90, .7); }
+  70% { box-shadow: 0 0 0 .7em rgba(255, 90, 90, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 90, 90, 0); }
+}
 
 /* ---------- Pantallas medianas ---------- */
 @media (max-width: 1100px) {
@@ -446,6 +485,12 @@ rt { font-family: var(--japones); font-feature-settings: "palt"; text-align: cen
 
 @media (max-width: 560px) {
   .petalo:nth-child(n + 7) { display: none; }
+  .en-obras { gap: .65em; padding: .74em 1.15em .7em .95em; letter-spacing: .14em; }
+  .en-obras__jp { padding-right: .65em; }
+}
+@media (max-width: 370px) {
+  .en-obras { font-size: .8rem; letter-spacing: .1em; }
+  .boton { padding: .8em 1em; font-size: .92rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
