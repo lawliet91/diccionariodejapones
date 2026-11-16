@@ -3,7 +3,10 @@
 Página «próximamente» del **Diccionario de Japonés**, un proyecto de Japonés a Fondo.
 
 - **Web publicada:** la carpeta `docs/`. GitHub Pages la sirve desde la rama `main`, carpeta `/docs`, con el dominio de `docs/CNAME`.
-- **Analítica:** Google Analytics 4, propiedad «Diccionario de Japonés» (cuenta «japonesafondo», ID de medición `G-6RZ1CL9BTP`). Solo se carga si la persona acepta el aviso de cookies (`docs/assets/app.js`).
+- **Dominio:** registrado en Spaceship, con sus DNS: 4 registros A y 4 AAAA de GitHub Pages, `www` como CNAME a `lawliet91.github.io` y dos TXT de verificación (Google y GitHub). No hay que tocarlos.
+- **Analítica:** Google Analytics 4, propiedad «Diccionario de Japonés» (cuenta «japonesafondo», p564440325, ID de medición `G-6RZ1CL9BTP`, datos 14 meses, enlazada con Search Console). Solo se carga si la persona acepta el aviso de cookies (`docs/assets/app.js`).
+- **Search Console:** propiedad de dominio `diccionariodejapones.com`, verificada por DNS, con `sitemap.xml` enviado.
+- **IndexNow** (Bing y otros): la clave es el archivo `.txt` de 32 caracteres de `docs/`. Para avisar de una URL nueva: `https://api.indexnow.org/indexnow?url=<url>&key=<clave>`.
 - **Herramientas** (`herramientas/`, no se publican):
   - `imagenes.mjs`: Coco-chan y logos en AVIF y WebP.
   - `graficos.mjs` + `og.html`: imagen para redes (1200×630) e iconos.
